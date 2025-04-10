@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="FormulaireCss.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <form method="post" action="userAdd.php" enctype="multipart/form-data">
+            <h2>Inscription</h2>
+            <label for="nomId">Nom</label>
+            <input type="text" name="nom" id="nomId" placeholder="Entrer votre nom..." required>
+
+            <label for="prenomId">Prenom</label>
+            <input type="text" name="prenom" id="prenomId" placeholder="Entrer votre prenom..." required>
+
+            <label for="DDNId">Date de naissance</label>
+            <input type="date" name="Datedenaissance" id="DDNId" placeholder="jj/dd/aaaa" required>
+
+            <label for="emailId">E-mail</label>
+            <input type="email" name="email" id="emailId" required>
+
+            <div class="radio-group">
+                <label>Sexe</label>
+                <label for="mId">M<input type="radio" name="sexe" id="mId" value="M" required></label>
+                <label for="fId">F<input type="radio" name="sexe" id="fId" value="F"></label>
+            </div>
+
+            <label for="filId">Les filieres</label>
+            <select name="branche" id="filId" required>
+                <option value="DSI">Développement des Systèmes d’Information</option>
+                <option value="SE">Systèmes Electroniques</option>
+                <option value="CPI">Conception du Produit Industriel</option>
+                <option value="MI">Maintenance Industrielle</option>
+                <option value="PME">PME/PMI</option>
+            </select>
+            <label for="fonctId">Les filieres</label>
+            <select name="fonction" id="fonctId" required>
+                <option value="Etudiant">Etudiant</option>
+                <option value="Professeur">Professeur</option>
+                <option value="Administarteur">Administarteur</option>
+            </select>
+
+            <label for="addrId">Adresse</label>
+            <textarea name="address" id="addrId" cols="24" rows="2" required></textarea>
+
+            <label for="pwId">Mot de passe</label>
+            <input type="password" name="password" id="pwId" required>
+
+            <label for="cpwId">Confirmation</label>
+            <input type="password" name="password" id="cpwId" required>
+
+            <div style="display: flex; justify-content: space-between;">
+                <input type="submit" value="Envoyer">
+                <input type="reset" value="Effacer">
+            </div>
+            <div class="login">
+                Déjà un compte? <a href="Login.html">Se connecter</a>
+            </div>
+        </form>
+    </fieldset>
+</body>
+
+</html>
